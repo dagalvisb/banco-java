@@ -1,14 +1,16 @@
-public class Cuenta{
+public class Cuenta {
 
     String numero;
     String tipo;
     double saldo;
 
+    /**
     public Cuenta (String numero, String tipo, double saldo){
         this.numero = numero;
         this.tipo = tipo;
         this.saldo = saldo;
     }
+    */
 
     public boolean retirarSaldo(double cantidadARetirar){
         if (cantidadARetirar <= this.saldo){
