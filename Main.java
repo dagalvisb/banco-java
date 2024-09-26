@@ -57,6 +57,8 @@ public class Main {
             resultado += cuenta.getSaldo();
         }
         System.out.println("resultado es: " + resultado);
+
+        
     }
 
 }

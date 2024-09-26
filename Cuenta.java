@@ -1,5 +1,9 @@
 public class Cuenta {
 
+    String numero;
+    String tipo;
+    double saldo;
+    
     public String getNumero() {
         return numero;
     }
@@ -23,10 +27,6 @@ public class Cuenta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
-    String numero;
-    String tipo;
-    double saldo;
 
     
     public Cuenta (String numero, String tipo, double saldo){
@@ -59,5 +59,7 @@ public class Cuenta {
     public double consultarSaldo(){
         return this.saldo;
     }
+
+
 
 }
