@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class Banco {
+
+    String nombre;
     
     ArrayList<Cuenta> cuentas;
 

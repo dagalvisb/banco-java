@@ -22,15 +22,15 @@ public class Main {
         System.out.println(cuentaNueva.getNumero());
         */
 
-        Cuenta cuenta1 = new Cuenta("1234-6", "Corriente", 100000);
-        Cuenta cuenta2 = new Cuenta("1234-8", "Ahorros");
-        Cuenta cuenta3 = cuenta1;
+        // Cuenta cuenta1 = new Cuenta("1234-6", "Corriente", 100000);
+        // Cuenta cuenta2 = new Cuenta("1234-8", "Ahorros");
+        // Cuenta cuenta3 = cuenta1;
 
-        ArrayList<Cuenta> cuentas = new ArrayList<>();
+        // ArrayList<Cuenta> cuentas = new ArrayList<>();
 
-        cuentas.add(cuenta1);
-        cuentas.add(cuenta2);
-        cuentas.add(cuenta3);
+        // cuentas.add(cuenta1);
+        // cuentas.add(cuenta2);
+        // cuentas.add(cuenta3);
 
         //System.out.println(cuentas.get(0).consultarSaldo());
 
@@ -40,11 +40,11 @@ public class Main {
         }
         */
 
-        System.out.println("____________________________________________________________");
+        // System.out.println("____________________________________________________________");
         
-        for (Cuenta cuenta : cuentas) {
-            System.out.printf("Numero de cuenta: %s, Tipo de cuenta: %s, El saldo es: %.2f \n", cuenta.getNumero(), cuenta.getTipo(), cuenta.getSaldo());
-        }
+        // for (Cuenta cuenta : cuentas) {
+        //     System.out.printf("Numero de cuenta: %s, Tipo de cuenta: %s, El saldo es: %.2f \n", cuenta.getNumero(), cuenta.getTipo(), cuenta.getSaldo());
+        // }
 
         /**System.out.println("____________________________________________________________");
 
@@ -52,13 +52,27 @@ public class Main {
             System.out.printf("Numero de cuenta: %s, Tipo de cuenta: %s, El saldo es: %.2f \n", cuenta.getNumero(), cuenta.getTipo(), cuenta.getSaldo());
         });
         */
-        double resultado = 0;
-        for (Cuenta cuenta : cuentas) {
-            resultado += cuenta.getSaldo();
-        }
-        System.out.println("resultado es: " + resultado);
+        // double resultado = 0;
+        // for (Cuenta cuenta : cuentas) {
+        //     resultado += cuenta.getSaldo();
+        // }
+        // System.out.println("resultado es: " + resultado);
 
-        
+        Banco banco = new Banco();
+        boolean pudoAdicionar = banco.adicionarCuenta("1234", 100000, "Ahorros");
+        if (pudoAdicionar){
+            System.out.println("Adiciono Bien");
+        }else{
+            System.out.println("No pudo adicionar");
+        }
+
+        pudoAdicionar = banco.adicionarCuenta("1234-4", 200000, "Corriente");
+        if (pudoAdicionar){
+            System.out.println("Adiciono Bien");
+        }else{
+            System.out.println("No pudo adicionar");
+        }
+        System.out.println("Total dinero banco: " + banco.consultarTotalDinero());
     }
 
 }
