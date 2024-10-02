@@ -1,6 +1,6 @@
 public class Cliente{
     String cedula;
-    String nombre;
+    String nombreCliente;
 
     public String getCedula() {
         return cedula;
@@ -10,16 +10,22 @@ public class Cliente{
         this.cedula = cedula;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 
     public Cliente (String cedula, String nombre){
         this.cedula = cedula;
-        this.nombre = nombre;
+        this.nombreCliente = nombre;
     }
+
+    public Cliente (){
+        this("1234567", "");
+    }
+
+
 }

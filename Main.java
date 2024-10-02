@@ -58,15 +58,16 @@ public class Main {
         // }
         // System.out.println("resultado es: " + resultado);
 
+        Cliente titular = new Cliente();
         Banco banco = new Banco();
-        boolean pudoAdicionar = banco.adicionarCuenta("1234", 100000, "Ahorros");
+        boolean pudoAdicionar = banco.adicionarCuenta("1234", 100000, "Ahorros",titular);
         if (pudoAdicionar){
             System.out.println("Adiciono Bien");
         }else{
             System.out.println("No pudo adicionar");
         }
 
-        pudoAdicionar = banco.adicionarCuenta("1234-4", 200000, "Corriente");
+        pudoAdicionar = banco.adicionarCuenta("1234-4", 200000, "Corriente", titular);
         if (pudoAdicionar){
             System.out.println("Adiciono Bien");
         }else{
