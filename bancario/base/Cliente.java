@@ -1,3 +1,5 @@
+package base;
+
 public class Cliente{
     String cedula;
     String nombreCliente;
@@ -6,16 +8,8 @@ public class Cliente{
         return cedula;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
     public String getNombreCliente() {
         return nombreCliente;
-    }
-
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
     }
 
     public Cliente (String cedula, String nombre){
