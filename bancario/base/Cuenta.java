@@ -1,16 +1,14 @@
+package base;
+
 public class Cuenta {
 
-    Cliente titular = new Cliente();
+    Cliente titular;
     String numero;
     String tipo;
     double saldo;
 
     public Cliente getTitular() {
         return titular;
-    }
-
-    public void setTitular(Cliente titular) {
-        this.titular = titular;
     }
     
     public String getNumero() {
@@ -48,10 +46,6 @@ public class Cuenta {
 
     public Cuenta (String numero, String tipo, Cliente titular){
         this(numero, tipo, 0, titular);
-    }
-
-    public Cuenta(Cliente titular){
-        this("", "Ahorros", 0, titular);
     }
 
     public boolean retirarSaldo(double cantidadARetirar){

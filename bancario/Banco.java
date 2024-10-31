@@ -1,24 +1,10 @@
+
 import java.util.ArrayList;
+import base.Cliente;
+import base.Cuenta;
+
 
 public class Banco {
-
-    
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public ArrayList<Cuenta> getCuentas() {
-        return cuentas;
-    }
-
-    public void setCuentas(ArrayList<Cuenta> cuentas) {
-        this.cuentas = cuentas;
-    }
 
     String nombre;
     
@@ -38,12 +24,14 @@ public class Banco {
         return null;
     }
 
-    public boolean adicionarCuenta(String numero, double saldoInicial, String tipo, Cliente titular){
+    public boolean adicionarCuenta(String numero, double saldoInicial, String tipo, String cedulaTitular, String nombreTitular){
         
+        Cliente cliente = new Cliente(cedulaTitular, nombreTitular);
+
         if (this.buscarCuenta(numero) != null){
             return false;
         }else {
-            Cuenta cuenta = new Cuenta(numero, tipo, saldoInicial, titular);
+            Cuenta cuenta = new Cuenta(numero, tipo, saldoInicial, cliente);
             cuentas.add(cuenta);
             return true;
         }

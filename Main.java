@@ -1,4 +1,6 @@
-//import java.util.ArrayList;
+//import java.util
+
+import base.Cliente;
 
 public class Main {
     
@@ -58,22 +60,27 @@ public class Main {
         // }
         // System.out.println("resultado es: " + resultado);
 
-        Cliente titular = new Cliente();
-        Banco banco = new Banco();
-        boolean pudoAdicionar = banco.adicionarCuenta("1234", 100000, "Ahorros",titular);
-        if (pudoAdicionar){
-            System.out.println("Adiciono Bien");
-        }else{
-            System.out.println("No pudo adicionar");
-        }
+        // Cliente titular = new Cliente();
+        // Banco banco = new Banco();
+        // boolean pudoAdicionar = banco.adicionarCuenta("1234", 100000, "Ahorros", "19287374", "Jaime");
+        // if (pudoAdicionar){
+        //     System.out.println("Adiciono Bien");
+        // }else{
+        //     System.out.println("No pudo adicionar");
+        // }
 
-        pudoAdicionar = banco.adicionarCuenta("1234-4", 200000, "Corriente", titular);
-        if (pudoAdicionar){
-            System.out.println("Adiciono Bien");
-        }else{
-            System.out.println("No pudo adicionar");
-        }
-        System.out.println("Total dinero banco: " + banco.consultarTotalDinero());
+        // pudoAdicionar = banco.adicionarCuenta("1234-4", 200000, "Corriente", "1098273", "Daniel");
+        // if (pudoAdicionar){
+        //     System.out.println("Adiciono Bien");
+        // }else{
+        //     System.out.println("No pudo adicionar");
+        // }
+        // System.out.println("Total dinero banco: " + banco.consultarTotalDinero());
+        // System.out.println("Cliente mayor saldo: " + banco.consultarClienteMayorSaldo());
+        
+        operacionesBanco operacionesBanco = new operacionesBanco();
+
+        operacionesBanco.menuOpciones();
     }
 
 }
