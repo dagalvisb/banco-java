@@ -10,6 +10,8 @@ public class Banco {
     
     ArrayList<Cuenta> cuentas;
 
+    public Object cuenta;
+
     public Banco() {
         this.cuentas = new ArrayList<>();
     }
